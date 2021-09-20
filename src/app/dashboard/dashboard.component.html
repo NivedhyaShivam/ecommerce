@@ -28,9 +28,9 @@
             </th>
             <th pSortableColumn="project">Project <p-sortIcon field="project"></p-sortIcon>
             </th>
-            <th pSortableColumn="projectDescription">Project Description <p-sortIcon field="projectDescription">
+            <!-- <th pSortableColumn="projectDescription">Project Description <p-sortIcon field="projectDescription">
                 </p-sortIcon>
-            </th>
+            </th> -->
         </ng-template>
         <ng-template pTemplate="body" let-car>
             <tr>
@@ -38,7 +38,7 @@
                 <td>{{car.email}}</td>
                 <td>{{car.designation}}</td>
                 <td>{{car.project}}</td>
-                <td>{{car.projectDescription}}</td>
+                <!-- <td>{{car.projectDescription}}</td> -->
             </tr>
         </ng-template>
         <ng-template pTemplate="emptymessage">
