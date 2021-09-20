@@ -3,9 +3,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 
 export const appRoutes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
     {path:'dashboard', component: DashboardComponent},
-    { path: 'home', component: HomeComponent },
+    { path: 'login', component: HomeComponent },
    
 ];
 export const APP_DECLARATIONS=[

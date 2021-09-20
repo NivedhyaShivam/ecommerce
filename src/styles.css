@@ -1,7 +1,9 @@
-@import '~@swimlane/ngx-datatable/index.css';  
+/* @import '~@swimlane/ngx-datatable/index.css';  
 @import '~@swimlane/ngx-datatable/themes/bootstrap.css';  
-@import '~@swimlane/ngx-datatable/assets/icons.css';  
-  
+@import '~@swimlane/ngx-datatable/assets/icons.css';   */
+body{
+  overflow: hidden !important;
+}
 
 .content-wrapper{
   height: 100vh;
