@@ -2,8 +2,10 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule} from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
+//import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 //import { SimpleNotificationsModule , NotificationsService} from 'angular2-notifications';
+
 import { LoaderInterceptor } from './_service/loaderInterceptor';
 import {TableModule} from 'primeng/table';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
@@ -39,7 +41,7 @@ import { LoaderComponent } from './loader/loader.component';
     BrowserModule,
     RouterModule,
     HttpClientModule,
-    NgxDatatableModule,
+    //NgxDatatableModule,
     TableModule,
     ProgressSpinnerModule,
     BrowserAnimationsModule,
