@@ -1,0 +1,82 @@
+<div class="table-content">
+    <i class="pi pi-home" style="font-size: 2rem" (click)="backToHome()"></i>
+</div>
+<div >
+    
+    <!-- <ngx-datatable class='bootstrap no-detail-row' [columnMode]="'force'" [footerHeight]="50" [rowHeight]="'auto'"    
+    [rows]='rows' [count]="totalCount" [limit]="dataParams.page_size">    
+    <ngx-datatable-column [flexGrow]="1" name="Name" prop="name"></ngx-datatable-column>    
+    <ngx-datatable-column [flexGrow]="1" name="Email" prop="email"></ngx-datatable-column>    
+    <ngx-datatable-column [flexGrow]="1" name="Designation" prop="designation"></ngx-datatable-column>    
+    <ngx-datatable-column  [flexGrow]="1" name="Project" prop="project"></ngx-datatable-column>    
+    <ngx-datatable-column [flexGrow]="4"name="Project Description"prop="projectDescription"></ngx-datatable-column>  
+</ngx-datatable> -->
+
+ 
+<!-- 
+<table class="ngx-datatable bootstrap">
+    <tr class="table table-striped">
+        <th scope="col">S.no</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Project</th>
+        <th scope="col">Project Description</th>
+    </tr>
+    <tr *ngFor="let result of resultData; index as i">
+        <td scope="row">{{ i }}</td>
+        <td scope="row">{{ result.name }}</td>
+        <td scope="row">{{ result.email }}</td>
+        <td scope="row">{{ result.designation }}</td>
+        <td scope="row">{{ result.project }}</td>
+        <td scope="row">{{ result.projectDescription }}</td>
+    </tr>
+</table> -->
+<!-- <ng-container *ngIf="showLoader">
+    <p-progressSpinner></p-progressSpinner>
+</ng-container> -->
+
+
+<p-table #dt [value]="cars" [paginator]="true" [rows]="10" [loading]="loading" styleClass="p-datatable-customers"
+[showCurrentPageReport]="true"  [scrollable]="true" scrollHeight="500px"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]" [filterDelay]="0" [globalFilterFields]="['name','email','designation','projectDescription','project']">
+        <ng-template pTemplate="caption">
+            <div class="table-header">
+                List of Project Members
+                <span class="p-input-icon-left">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" style="text-align: center;padding: 5px;" (input)="dt.filterGlobal($event.target.value, 'contains')" placeholder="Global Search" />
+                </span>
+            </div>
+        </ng-template>
+    <ng-template pTemplate="header">
+            <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+            <th pSortableColumn="email">Email <p-sortIcon field="email"></p-sortIcon></th>
+            <th pSortableColumn="designation">Designation<p-sortIcon field="designation"></p-sortIcon></th>
+            <th pSortableColumn="project">Project <p-sortIcon field="project"></p-sortIcon></th>
+            <th pSortableColumn="projectDescription">Project Description <p-sortIcon field="projectDescription"></p-sortIcon></th>
+    </ng-template>
+    <ng-template pTemplate="body" let-car>
+        <tr>
+            <td>{{car.name}}</td>
+            <td>{{car.email}}</td>
+            <td>{{car.designation}}</td>
+            <td>{{car.project}}</td>
+            <td>{{car.projectDescription}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td colspan="5">No Data found.</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="paginatorleft">
+        <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+        <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+    </ng-template>
+</p-table>
+
+</div>
+<p-toast></p-toast>

@@ -1,0 +1,92 @@
+::ng-deep .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {
+    width:25% !important;
+}
+
+::ng-deep .ngx-datatable.bootstrap .datatable-body .datatable-body-row .datatable-body-cell {
+    width:25% !important;
+}
+
+::ng-deep .ngx-datatable.bootstrap {
+    width: 1200px !important;
+    margin-left: 10rem !important;
+        box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+::ng-deep .ngx-datatable{
+    border: 3px double #e3dddd !important;
+}
+
+::ng-deep .ngx-datatable.bootstrap .datatable-header {
+background-color: #333;
+color:white;
+font-weight: 700;
+}
+
+::ng-deep body .ui-table {
+    width: 1200px !important;
+    margin-left: 10rem !important;
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+::ng-deep .ui-paginator-bottom {
+    margin-left: 0rem !important;
+}
+
+::ng-deep .ui-progress-spinner{
+    margin-left:40rem !important;
+}
+
+::ng-deep .p-datatable{
+    width: 1200px !important;
+    margin-left: 10rem !important;
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+::ng-deep .p-input-icon-left{
+    float:right !important;
+}
+
+::ng-deep .p-datatable-thead {
+    line-height: 50px!important;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 69px;
+}
+
+@media screen and (max-width: 64em) {
+    :host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+        top: 99px;
+    }
+}
+
+::ng-deep .p-datatable .p-sortable-column {
+    background-color: #6c757d !important;
+    color: white!important;
+
+}
+
+::ng-deep .p-sortable-column-icon .pi .pi-fw .pi-sort-alt {
+    color: white !important;
+}
+
+::ng-deep .p-sortable-column-icon .pi .pi-fw .pi-sort-amount-down {
+    color: white !important;
+}
+
+::ng-deep .p-sortable-column-icon .pi .pi-fw .pi-sort-amount-up-alt {
+    color: white !important;
+} 
+
+::ng-deep .p-datatable .p-sortable-column .p-sortable-column-icon {
+    color:white !important;
+}
+
+.table-content{
+    color:white;
+    padding:25px;
+    cursor: pointer;
+    
+}

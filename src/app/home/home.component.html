@@ -1,0 +1,22 @@
+
+<!-- <div class="content-wrapper">
+    <button (click)="goToDashboard()">View Table</button>
+</div> -->
+
+<div class="home-content">
+    <h1>WELCOME</h1>
+    <h3>Enter Your Credentials to Login</h3>
+    <div >
+        <i class="pi pi-id-card" style="font-size: 2rem;padding-right: 10px;"></i>
+        <input type="text" class="custom-input" [(ngModel)]="username" placeholder="Enter Username" />
+    </div>
+    <div>
+        <i class="pi pi-lock" style="font-size: 2rem;padding-right: 10px;"></i>
+        <input type="password" class="custom-input"[(ngModel)]="password" placeholder="Enter Password"/>
+    </div>
+    <div style="padding-top: 30px;padding-left: 2rem;">
+        <button class="custom-button" (click)="goToDashboard()" [class.disabled]="isDisabled">Log In</button>
+    </div>
+</div>
+<p-toast></p-toast>
+

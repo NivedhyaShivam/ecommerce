@@ -1,0 +1,67 @@
+@import '~@swimlane/ngx-datatable/index.css';  
+@import '~@swimlane/ngx-datatable/themes/bootstrap.css';  
+@import '~@swimlane/ngx-datatable/assets/icons.css';  
+  
+
+.content-wrapper{
+  height: 100vh;
+    padding: 15px;
+    margin-top: 3rem;
+}
+
+.left-menu-wrapper{
+  margin-top: 4rem;
+  /* background-color: aqua; */
+  width: 180px;
+  position: fixed;
+  float: left;
+  height: 100%;
+  max-width: 100%;
+
+}
+
+.container-fluid {
+  display: flow-root;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.list-unstyled {
+  list-style: none;
+}
+
+.list-space{
+  padding: 10px;
+}
+
+@keyframes ui-progress-spinner-color {
+  100%,
+  0% {
+      stroke: #d62d20;
+  }
+  40% {
+      stroke: #0057e7;
+  }
+  66% {
+      stroke: #008744;
+  }
+  80%,
+  90% {
+      stroke: #ffa700;
+  }
+}
+
+button {
+  min-width: 10rem;
+  margin-right: .5rem;
+}
+
+@media screen and (max-width: 960px) {
+  button {
+      width: 100%;
+      margin-bottom: .5rem;
+  }
+}
+
