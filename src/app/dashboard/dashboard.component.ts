@@ -34,10 +34,10 @@ export class DashboardComponent implements OnInit {
   showLoader: boolean = true;
   translatedText: string;
   supportedLanguages: any[];
-  apiKey = ''
-  url = 'https://translation.googleapis.com/language/translate';
-  result: any;
-  q = 'Reprehenderit enim occaecat adipisicing enim.';
+  // apiKey = ''
+  // url = 'https://translation.googleapis.com/language/translate';
+  // result: any;
+  // q = 'Reprehenderit enim occaecat adipisicing enim.';
   ngOnInit(): void {
     this.dataParams.page_num = 1;
     this.dataParams.page_size = 10;
@@ -51,11 +51,11 @@ export class DashboardComponent implements OnInit {
       // set current langage
       // this.selectLang('es');
 
-      $('#trans').click(function() {
-         this.url.language.translate($('#some').html(), 'en', 'fr', function(result) {
-            $('#some').html(result.translation);
-        });
-      });
+      // $('#trans').click(function() {
+      //    this.url.language.translate($('#some').html(), 'en', 'fr', function(result) {
+      //       $('#some').html(result.translation);
+      //   });
+      // });
 
     //   this.url.language.translate(text, 'es', 'en', function(result) {
     //     var translated = document.getElementById("translation");
@@ -65,13 +65,13 @@ export class DashboardComponent implements OnInit {
     // });
 
 
-    let params = new HttpParams();
-    params = params.append('q', this.q);
-    params = params.append('target', 'es');
-    params = params.append('key ', this.apiKey);
+    // let params = new HttpParams();
+    // params = params.append('q', this.q);
+    // params = params.append('target', 'es');
+    // params = params.append('key ', this.apiKey);
 
-    this.http.get(this.url, {params: params})
-      .subscribe(response => this.result = response);
+    // this.http.get(this.url, {params: params})
+    //   .subscribe(response => this.result = response);
   }
 
 
@@ -81,7 +81,7 @@ export class DashboardComponent implements OnInit {
       result.forEach(val => {
         val['name'] = val['firstName'] + ' ' + val['lastName']
       })
-      $('body').translate({lang: "en",});
+      // $('body').translate({lang: "en",});
       if (result.length != 0) {
         this.showLoader = false;
         this.loading = false;
