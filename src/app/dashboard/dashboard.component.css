@@ -48,12 +48,20 @@ font-weight: 700;
 
 ::ng-deep .p-datatable-thead {
     line-height: 50px!important;
+
 }
 
 :host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
     position: -webkit-sticky;
     position: sticky;
     top: 69px;
+    
+}
+
+
+::ng-deep .p-datatable .p-sortable-column {
+    padding-left: 2rem !important;
+    text-align: left !important;
 }
 
 @media screen and (max-width: 64em) {
@@ -86,8 +94,12 @@ font-weight: 700;
 
 
 ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
-text-align: center !important;
+/* text-align: center !important; */
+padding-left: 2rem;
 }
+
+
+
 .table-content{
     color:white;
     padding:25px;

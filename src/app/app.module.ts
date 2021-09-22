@@ -22,6 +22,7 @@ import { PageBannerComponent } from './page-banner/page-banner.component';
 
 import { HttpInterceptorService} from './_service/httpInterceptors';
 import { LoaderService } from './_service/loader.service';
+import { AuthGaurd } from './_service/authGaurd';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { LoaderComponent } from './loader/loader.component';
 
@@ -50,7 +51,7 @@ import { LoaderComponent } from './loader/loader.component';
     //SimpleNotificationsModule,
     RouterModule.forRoot(appRoutes) 
   ],
-  providers: [LoaderService,
+  providers: [LoaderService,AuthGaurd,
     {provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true},{provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true}],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

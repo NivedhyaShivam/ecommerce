@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../_service/api.service'
 import { MessageService } from 'primeng/api';
 import { Router } from '@angular/router';
-import * as $ from 'jquery'
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 @Component({
@@ -24,8 +23,6 @@ export class DashboardComponent implements OnInit {
   first = 0;
   rows = 10;
   showLoader: boolean = true;
-  translatedText: string;
-  supportedLanguages: any[];
 
   ngOnInit(): void {
     this.getData();
@@ -43,7 +40,7 @@ export class DashboardComponent implements OnInit {
       this.totalCount = result.length;
       console.log('result', this.resultData)
       this.cars = result;
-      this.columns = [{ prop: 'id' }, { name: 'firstName' }, { name: 'lastName' }, { name: 'email' }, { name: 'project' }, { name: 'projectDescription' }, { name: 'designation' }];
+      //this.columns = [{ prop: 'id' }, { name: 'firstName' }, { name: 'lastName' }, { name: 'email' }, { name: 'project' }, { name: 'projectDescription' }, { name: 'designation' }];
     },
       error => {
         console.log('from component', error)
@@ -81,6 +78,7 @@ export class DashboardComponent implements OnInit {
       //this.message.add({ severity: 'success', summary: 'Success', detail: 'Loggged out successfully!', life: 5000, sticky: true });
     }
     setTimeout(() => {
+      localStorage.setItem('access-token', "")
       this.route.navigateByUrl('/login')
     }, 500);
 
