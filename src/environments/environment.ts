@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiURL: 'https://run.mocky.io/v3/50f243fb-c691-4d02-b594-5ca9992939aa'
+  apiURL: 'http://61629be637492500176315fa.mockapi.io/getProducts'
+  // apiURL: 'https://my.api.mockaroo.com/ecommerce.json?key=1d57ed40'
 };
 
 /*

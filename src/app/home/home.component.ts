@@ -1,6 +1,7 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
-import { Router } from '@angular/router';
+import {  Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,8 @@ export class HomeComponent implements OnInit {
   username: string = "";
   password: string = '';
   isDisabled: boolean = true;
+  loginForm:FormGroup
+
   ngOnInit(): void {
   }
 
@@ -32,7 +35,10 @@ export class HomeComponent implements OnInit {
     if ((this.username != '') && (this.password != '')) {
       if ((this.username == 'Nivedhya') && (this.password != 'Nive@123')) {
         this.message.add({ severity: 'error', summary: 'Error', detail: 'Username and Password does not match' });
-      } else {
+      } else if((this.username != 'Nivedhya') && (this.password != 'Nive@123')){
+        this.message.add({ severity: 'error', summary: 'Error', detail: 'Unauthorized User' });
+      }
+        else {
         this.route.navigateByUrl('/dashboard')
       }
     } else {
